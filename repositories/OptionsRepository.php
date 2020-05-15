@@ -69,7 +69,7 @@ class OptionRepository{
 
         $results = TableModel::select($this);
         
-        $html .= '<option disabled selected value="none"> Seleccioné </option>';
+        $html .= '<option disabled selected value="none"> ---- </option>';
 
         foreach ($results as $result) {
             $html .= sprintf( $option, $result->{$this->value},$result->{$this->text});
