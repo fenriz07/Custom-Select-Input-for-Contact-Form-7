@@ -7,15 +7,13 @@ include DIR_CSI7 . '/repositories/OptionsRepository.php';
 
 /*
 Plugin Name: Custom Select Input for Contact Form 7
-Plugin URI: 
+Plugin URI:  https://github.com/fenriz07/Custom-Select-Input-for-Contact-Form-7
 Description: Create a select input to fill  by tabñe
 Author: Servio Zambrano
-Author URI: 
+Author URI: https://github.com/fenriz07
 Text Domain: contact-form-7-select-input
 Version: 1.0.0
 */
-
-
 
 
 add_action('wpcf7_init', 'add_custom_select_tag_csi7');
@@ -56,7 +54,7 @@ function custom_select_input_handler_csi7($tag)
 
     $options = $OptionRepository->getOptions();
 
-    $html = '<span class="wpcf7-form-control-wrap %s"><select %s>  %s  </select></span>';
+    $html = '<span class="wpcf7-form-control-wrap %s"><select %s wpcf7-select>  %s  </select></span>';
 
     $html = sprintf( $html, $tag->name,$atts,$options );
 
